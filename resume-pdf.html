@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minea Chhay - Resume</title>
+    <style>
+        :root {
+            --text: #111827;
+            --muted: #4b5563;
+            --line: #d1d5db;
+            --accent: #9a6b19;
+            --bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #f3f4f6;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.45;
+        }
+
+        .actions {
+            width: 210mm;
+            margin: 16px auto 0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .action-btn {
+            border: 0;
+            border-radius: 999px;
+            padding: 10px 16px;
+            background: #111827;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .action-btn.secondary {
+            background: #ffffff;
+            color: var(--text);
+            border: 1px solid var(--line);
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 14mm 14mm 16mm;
+            background: var(--bg);
+        }
+
+        .header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+
+        .name {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin: 0 0 4px;
+        }
+
+        .title {
+            font-size: 15px;
+            color: var(--accent);
+            font-weight: 600;
+            margin: 0 0 10px;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .contact a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2.1fr 1fr;
+            gap: 22px;
+        }
+
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 0 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .job {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .job-date {
+            font-size: 12px;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .job-meta {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: 12.5px;
+        }
+
+        .side-block {
+            margin-bottom: 16px;
+        }
+
+        .side-list,
+        .compact-list {
+            display: grid;
+            gap: 6px;
+        }
+
+        .side-item {
+            font-size: 12.5px;
+            color: var(--text);
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .edu-title,
+        .cert-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 4px 8px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            html {
+                background: #fff;
+            }
+
+            .actions {
+                display: none;
+            }
+
+            .page {
+                margin: 0;
+                width: auto;
+                min-height: auto;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="actions">
+        <button class="action-btn secondary" type="button" onclick="window.close()">Close</button>
+        <button class="action-btn" type="button" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+    <div class="page">
+        <header class="header">
+            <h1 class="name">Minea Chhay</h1>
+            <p class="title">IT Manager | Infrastructure Leader | Cybersecurity-Focused Operations Professional</p>
+            <div class="contact">
+                <span>Sihanoukville, Cambodia</span>
+                <a href="tel:+855092789324">+855 (0) 92 789 324</a>
+                <a href="mailto:chhayminea7@gmail.com">chhayminea7@gmail.com</a>
+                <a href="https://www.linkedin.com/in/minea-chhay/">linkedin.com/in/minea-chhay</a>
+            </div>
+        </header>
+
+        <div class="grid">
+            <main>
+                <section class="section">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p class="summary">
+                        IT Manager with 10+ years of experience leading infrastructure, security, and support operations
+                        across hospitality, gaming, airline, and enterprise environments. Strong track record in improving
+                        operational reliability, standardizing support processes, coordinating vendors, and supporting
+                        business-critical systems in 24/7 environments where uptime and service quality directly affect outcomes.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Manager</div>
+                            <div class="job-date">Mar 2025 - Present</div>
+                        </div>
+                        <div class="job-meta">PALACE HOTEL | Sihanoukville, Cambodia</div>
+                        <ul>
+                            <li>Lead end-to-end IT operations covering infrastructure reliability, service delivery, vendor coordination, and security controls.</li>
+                            <li>Own escalation handling and operational support for business-critical services used in day-to-day hotel operations.</li>
+                            <li>Standardize workflows and documentation to improve response consistency and strengthen operational control.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Manager</div>
+                            <div class="job-date">Jul 2023 - Mar 2025</div>
+                        </div>
+                        <div class="job-meta">Goldeneye - Hotel &amp; Resort | Kapitan Andreevo, Bulgaria</div>
+                        <ul>
+                            <li>Directed IT operations for an international hotel and resort property across guest-facing and back-office systems.</li>
+                            <li>Managed hotel systems, infrastructure support, and service maintenance in a cross-border operating environment.</li>
+                            <li>Worked with local teams and stakeholders to improve day-to-day support reliability and operational execution.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Manager</div>
+                            <div class="job-date">Nov 2021 - Jul 2023</div>
+                        </div>
+                        <div class="job-meta">Jin Bei Group | Sihanoukville, Cambodia</div>
+                        <ul>
+                            <li>Led IT strategy and execution for gaming and hospitality operations in a high-availability environment.</li>
+                            <li>Oversaw infrastructure and operational systems supporting round-the-clock business activity.</li>
+                            <li>Drove upgrades and service improvements while maintaining continuity across multiple business units.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Infrastructure Manager</div>
+                            <div class="job-date">Apr 2019 - Nov 2021</div>
+                        </div>
+                        <div class="job-meta">Jin Bei Group | Sihanoukville, Cambodia</div>
+                        <ul>
+                            <li>Managed server, network, and security environments supporting enterprise and gaming operations.</li>
+                            <li>Improved resilience through stronger standards, redundancy planning, and disaster recovery preparation.</li>
+                            <li>Provided technical leadership for infrastructure projects and ongoing operational support.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Executive</div>
+                            <div class="job-date">Apr 2018 - Apr 2019</div>
+                        </div>
+                        <div class="job-meta">KC International Airlines | Phnom Penh, Cambodia</div>
+                        <ul>
+                            <li>Supported airline operations where system availability and rapid issue resolution were business-critical.</li>
+                            <li>Maintained support for booking, communication, and passenger-facing systems in a 24/7 environment.</li>
+                            <li>Built strong incident-handling discipline in operations where downtime had immediate impact.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Technician</div>
+                            <div class="job-date">Dec 2015 - Apr 2018</div>
+                        </div>
+                        <div class="job-meta">Nagaworld Ltd | Phnom Penh, Cambodia</div>
+                        <ul>
+                            <li>Delivered frontline and infrastructure support for a large-scale hospitality and gaming operation.</li>
+                            <li>Supported gaming systems, property management platforms, network services, and user needs.</li>
+                            <li>Built deep practical experience in service continuity for high-demand hospitality environments.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job">
+                        <div class="job-header">
+                            <div class="job-title">IT Technician</div>
+                            <div class="job-date">Mar 2013 - Nov 2015</div>
+                        </div>
+                        <div class="job-meta">Las Vegas Sun - Hotel &amp; Casino | Bavet, Cambodia</div>
+                        <ul>
+                            <li>Provided broad IT support across end-user systems, infrastructure, and operational technologies.</li>
+                            <li>Developed the troubleshooting, service, and systems foundation that supported later leadership roles.</li>
+                        </ul>
+                    </article>
+                </section>
+            </main>
+
+            <aside>
+                <section class="side-block">
+                    <h2 class="section-title">Core Strengths</h2>
+                    <div class="side-list">
+                        <div class="side-item">IT Operations Leadership</div>
+                        <div class="side-item">Infrastructure Management</div>
+                        <div class="side-item">Network Administration</div>
+                        <div class="side-item">Cybersecurity Awareness</div>
+                        <div class="side-item">Disaster Recovery Planning</div>
+                        <div class="side-item">Vendor Coordination</div>
+                        <div class="side-item">Project Execution</div>
+                        <div class="side-item">Documentation and SOPs</div>
+                    </div>
+                </section>
+
+                <section class="side-block">
+                    <h2 class="section-title">Technical Areas</h2>
+                    <div class="tag-list">
+                        <span class="tag">Servers</span>
+                        <span class="tag">Networks</span>
+                        <span class="tag">Fortinet</span>
+                        <span class="tag">Hotel Systems</span>
+                        <span class="tag">Casino Systems</span>
+                        <span class="tag">Virtualization</span>
+                        <span class="tag">Email Security</span>
+                        <span class="tag">Domain Management</span>
+                    </div>
+                </section>
+
+                <section class="side-block">
+                    <h2 class="section-title">Education</h2>
+                    <div class="compact-list">
+                        <div>
+                            <div class="edu-title">Bachelor of Management Information System</div>
+                            <div class="small">SETEC Institute</div>
+                            <div class="small">2009 - 2013</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="side-block">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="compact-list">
+                        <div>
+                            <div class="cert-title">NSE 2 Network Security Associate</div>
+                            <div class="small">Fortinet</div>
+                        </div>
+                        <div>
+                            <div class="cert-title">NSE 1 Network Security Associate</div>
+                            <div class="small">Fortinet</div>
+                        </div>
+                        <div>
+                            <div class="cert-title">The Evolution of Cybersecurity</div>
+                            <div class="small">Fortinet</div>
+                        </div>
+                        <div>
+                            <div class="cert-title">Information Security Awareness</div>
+                            <div class="small">Fortinet</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="side-block">
+                    <h2 class="section-title">Industry Exposure</h2>
+                    <div class="side-list">
+                        <div class="side-item">Hospitality</div>
+                        <div class="side-item">Gaming and Casino Operations</div>
+                        <div class="side-item">Airline Operations</div>
+                        <div class="side-item">Enterprise IT</div>
+                        <div class="side-item">Cambodia and International Markets</div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
