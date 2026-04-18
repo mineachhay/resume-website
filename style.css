@@ -156,7 +156,8 @@ strong {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100vw;
+    width: 100dvw;
     height: var(--nav-height);
     z-index: 1000;
     transition: all var(--transition-base);
@@ -183,7 +184,8 @@ strong {
 .nav-container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 var(--space-lg);
+    padding-left: max(var(--space-lg), env(safe-area-inset-left));
+    padding-right: max(var(--space-lg), env(safe-area-inset-right));
     height: 100%;
     display: flex;
     align-items: center;
@@ -274,18 +276,26 @@ strong {
 /* Mobile Navigation */
 .nav-toggle {
     display: none;
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     position: relative;
     z-index: 1001;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .hamburger {
     display: block;
     width: 24px;
-    height: 2px;
+    height: 2.5px;
     background: var(--text-primary);
     position: relative;
+    border-radius: var(--radius-full);
     transition: background var(--transition-base);
 }
 
@@ -295,8 +305,9 @@ strong {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 2.5px;
     background: var(--text-primary);
+    border-radius: var(--radius-full);
     transition: transform var(--transition-base);
 }
 
@@ -1977,12 +1988,24 @@ button:focus-visible {
     }
 
     /* Navigation */
+    .navbar {
+        width: 100vw;
+        width: 100dvw;
+    }
+
+    .nav-container {
+        padding-left: max(var(--space-md), env(safe-area-inset-left));
+        padding-right: max(var(--space-md), env(safe-area-inset-right));
+    }
+
     .nav-menu {
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
+        width: 100vw;
+        width: 100dvw;
+        min-height: 100vh;
+        min-height: 100dvh;
         background: rgba(10, 10, 15, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
