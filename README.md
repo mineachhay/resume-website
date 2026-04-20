@@ -6,7 +6,7 @@ Personal resume website for Minea Chhay, built as a single-page portfolio with a
 
 This project is prepared for GitHub Pages hosting at:
 
-`https://mineachhay.github.io/resume-website/`
+https://mineachhay.github.io/resume-website/
 
 If the repository name or Pages URL changes, update these values in [index.html](./index.html):
 - `canonical`
